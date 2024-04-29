@@ -1,9 +1,9 @@
 const cacheName = "DefaultCompany-My project-0.1";
 const contentToCache = [
     "Build/XEX Machanics Build.loader.js",
-    "Build/XEX Machanics Build.framework.js.gz",
-    "Build/XEX Machanics Build.data.gz",
-    "Build/XEX Machanics Build.wasm.gz",
+    "Build/XEX Machanics Build.framework.js",
+    "Build/XEX Machanics Build.data",
+    "Build/XEX Machanics Build.wasm",
     "TemplateData/style.css"
 
 ];
