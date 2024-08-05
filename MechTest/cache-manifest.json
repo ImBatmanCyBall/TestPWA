@@ -1,0 +1,29 @@
+{
+    "version": 1,
+    "files": [
+        {
+            "path": "/",
+            "lastModified": 1703278632246
+        },
+        {
+            "path": "/css/style.css",
+            "lastModified": 1703278632246
+        },
+        {
+            "path": "/js/libs/localforage.min.js",
+            "lastModified": 1703278632246
+        },
+        {
+            "path": "/js/libs/push-manager.js",
+            "lastModified": 1703278632246
+        },
+        {
+            "path": "/js/libs/addtohomescreen.js",
+            "lastModified": 1703278632246
+        },
+        {
+            "path": "/js/app.js",
+            "lastModified": 1703278632246
+        }
+    ]
+}

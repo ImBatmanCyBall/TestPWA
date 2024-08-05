@@ -1,103 +1,182 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | XEX-Game</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
+
+<head>
+    <meta charset="utf-8" />
+    <base href="/" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>PWATestTemplate</title>
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="{{appName}}">
+    <meta name="apple-mobile-web-app-title" content="{{Title}}">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="apple-touch-icon" href="meta/ios-appicon-120-120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="meta/ios-appicon-152-152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="meta/ios-appicon-180-180.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="meta/ios-appicon-120-120.png">
+    <link href="meta/apple-touch-startup-image-320x460.png" media="(device-width: 320px)"
+        rel="apple-touch-startup-image">
+    <!-- iPhone (Retina) SPLASHSCREEN-->
+    <link href="meta/apple-touch-startup-image-640x920.png"
+        media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <!-- iPad (portrait) SPLASHSCREEN-->
+    <link href="meta/apple-touch-startup-image-768x1004.png" media="(device-width: 768px) and (orientation: portrait)"
+        rel="apple-touch-startup-image">
+    <!-- iPad (landscape) SPLASHSCREEN-->
+    <link href="meta/apple-touch-startup-image-748x1024.png" media="(device-width: 768px) and (orientation: landscape)"
+        rel="apple-touch-startup-image">
+    <!-- iPad (Retina, portrait) SPLASHSCREEN-->
+    <link href="meta/apple-touch-startup-image-1536x2008.png"
+        media="(device-width: 1536px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)"
+        rel="apple-touch-startup-image">
+    <!-- iPad (Retina, landscape) SPLASHSCREEN-->
+    <link href="meta/apple-touch-startup-image-2048x1496.png"
+        media="(device-width: 1536px)  and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)"
+        rel="apple-touch-startup-image">
+    <!-- iPhone 6/7/8 -->
+    <link href="/meta/apple-touch-startup-image-750x1334.png"
+        media="(device-width: 375px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <!-- iPhone 6 Plus/7 Plus/8 Plus -->
+    <link href="/meta/apple-touch-startup-image-1242x2208.png"
+        media="(device-width: 414px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+
+    <meta name="msapplication-starturl" content="/?utm_source=homescreen">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="favicon.png" rel="shortcut icon">
+    <link rel="icon" type="image/png" href="meta/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="meta/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="meta/favicon-96x96.png" sizes="96x96">
+
+    <meta name="theme-color" content="#180E1D">
+
     <link rel="manifest" href="manifest.webmanifest">
-  </head>
-  <body>
-    <div id="unity-container">
-      <canvas id="unity-canvas" width=1080 height=1920 tabindex="-1"></canvas>
-      <div id="unity-loading-bar">
-        <div id="unity-logo"></div>
-        <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full"></div>
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div id="installPrompt" class="install-prompt">
+        <header class="text-center">
+            <h1>Install Our App</h1>
+            <p>For the best experience, add our app to your home screen.</p>
+        </header>
+        <div class="required-notice">
+            <h2>Installation Required</h2>
+            <p>You need to install the app to access its features.</p>
+            <button class="btn-retry" type="button">Try Again</button>
         </div>
-      </div>
-      <div id="unity-warning"> </div>
+        <div id="instructions">
+            <div class="beforeinstallprompt-instructions">
+                <ol>
+                    <li>Tap the 'Install Now' button.</li>
+                    <li>Follow the prompts to install XEX.</li>
+                    <li><img src="img/beforeinstall-app-prompt-edge.png" alt="Native PWA Install Prompt"></li>
+                </ol>
+                <button class="btn-install triggerInstall visible" type="button">Install App</button>
+                <p class="text-center">Or</p>
+            </div>
+            <div id="install-iPhone" class="install-instructions">
+                <ol>
+                    <li>Tap the share button <span class="icon-share"></span> in your browser's toolbar.</li>
+                    <li>Select "Add to Home Screen".</li>
+                    <li>Follow the prompts to install.</li>
+                </ol>
+                <img src="img/iphone-share-add-to-home-screen.jpg" alt="iPhone Share Button" />
+                <img src="img/iphone-share-add-to-home-screen-confirm.jpg"
+                    alt="iPhone Add To Homescreen Confirmation" />
+            </div>
+            <div id="install-iPad" class="install-instructions">
+                <ol>
+                    <li>Tap the share button <span class="icon-share"></span> in your browser's toolbar.</li>
+                    <li>Select "Add to Home Screen".</li>
+                    <li>Follow the prompts to install.</li>
+                </ol>
+                <img src="img/ipad-share.png" alt="iPad Share Button" />
+            </div>
+            <div id="install-Android" class="install-instructions">
+                <ol>
+                    <li>Tap the menu button <span class="icon-menu"></span> in your browser's toolbar.</li>
+                    <li>Select "Add to Home Screen".</li>
+                    <li><img src="img/android-chrome-install.jpg" alt="Android Menu Button" />
+                    </li>
+                    <li>Follow the prompts to install.</li>
+                </ol>
+            </div>
+            <div id="install-Chrome" class="install-instructions">
+                <ol>
+                    <li>Click the install icon <span class="icon-install"></span> in the address bar.</li>
+                    <li>Select "Install".</li>
+                    <li>Follow the prompts to install.</li>
+                </ol>
+                <img src="img/android-chrome-install.png" alt="Chrome Install Icon" />
+            </div>
+            <div id="install-Edge" class="install-instructions">
+                <ol>
+                    <li>Click the install icon <span class="edge-icon-install install-image"><img
+                                src="img/install-pwa-edge.png" alt="Edge Install Icon" /></span><span
+                            class="chrome-icon-install install-image"><img src="img/install-pwa-chrome.png"
+                                alt="Chrome Install Icon" /></span> in the address bar.</li>
+                    <li>Select "Install".</li>
+                    <li>Follow the prompts to install.</li>
+                </ol>
+
+            </div>
+            <div id="install-Windows" class="install-instructions">
+                <ol>
+                    <li>Click the install icon in the address bar.</li>
+                    <li class="edge-icon-install install-image"><img src="img/install-pwa-edge.png"
+                            alt="Edge Install Icon" />
+                    </li>
+                    <li class="chrome-icon-install install-image"><img src="img/install-pwa-chrome.png"
+                            alt="Chrome Install Icon" /></li>
+                    <li>Select "Install".</li>
+                    <li>Follow the prompts to install.</li>
+                </ol>
+                <p class="text-center">Or</p>
+                <ol>
+                    <li>Click the three dots in the upper right corner of your browser.</li>
+                    <li class="edge-icon-install install-image">Select "Apps" then "Install Xex".</li>
+                    <li class="edge-icon-install install-image"><img src="img/install-pwa-edge-menu.png"
+                            alt="Edge Install Menu" /></li>
+                    <li class="chrome-icon-install install-image">Select "Save and Share" then "Install Xex".</li>
+                    <li class="chrome-icon-install install-image"><img src="img/install-pwa-chrome-menu.png"
+                            alt="Chrome Install Menu" />
+                    </li>
+                    <li>Follow the prompts to install.</li>
+                </ol>
+            </div>
+            <div id="install-Other" class="install-instructions">
+                <ol>
+                    <li>Check your browser's menu options.</li>
+                    <li>Look for "Install App" or "Add to Home Screen".</li>
+                    <li>Follow the prompts to install.</li>
+                </ol>
+            </div>
+        </div>
     </div>
-    <script>
-      window.addEventListener("load", function () {
-        if ("serviceWorker" in navigator) {
-          navigator.serviceWorker.register("ServiceWorker.js");
-        }
-      });
 
-      var container = document.querySelector("#unity-container");
-      var canvas = document.querySelector("#unity-canvas");
-      var loadingBar = document.querySelector("#unity-loading-bar");
-      var progressBarFull = document.querySelector("#unity-progress-bar-full");
-      var warningBanner = document.querySelector("#unity-warning");
+    <div id="unity-container">
+        <canvas id="unity-canvas" width=1080 height=1920 tabindex="-1"></canvas>
+        <div id="loading-cover">
+            <div id="unity-loading-bar">
+                <div id="unity-logo"></div>
+                <div id="unity-progress-bar-empty">
+                    <div id="unity-progress-bar-full"></div>
+                </div>
+            </div>
+        </div>
+        <div id="unity-warning"> </div>
+    </div>
 
-      // Shows a temporary message banner/ribbon for a few seconds, or
-      // a permanent error message on top of the canvas if type=='error'.
-      // If type=='warning', a yellow highlight color is used.
-      // Modify or remove this function to customize the visually presented
-      // way that non-critical warnings and error messages are presented to the
-      // user.
-      function unityShowBanner(msg, type) {
-        function updateBannerVisibility() {
-          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
-        }
-        var div = document.createElement('div');
-        div.innerHTML = msg;
-        warningBanner.appendChild(div);
-        if (type == 'error') div.style = 'background: red; padding: 10px;';
-        else {
-          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
-          setTimeout(function() {
-            warningBanner.removeChild(div);
-            updateBannerVisibility();
-          }, 5000);
-        }
-        updateBannerVisibility();
-      }
+    <script src="js/libs/localforage.min.js"></script>
+    <script src="js/libs/push-manager.js"></script>
+    <script src="js/libs/addtohomescreen.js"></script>
+    <script src="js/app.js"></script>
+</body>
 
-      var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/MechTest.loader.js";
-      var config = {
-        dataUrl: buildUrl + "/MechTest.data",
-        frameworkUrl: buildUrl + "/MechTest.framework.js",
-        codeUrl: buildUrl + "/MechTest.wasm",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "XEX",
-        productName: "XEX-Game",
-        productVersion: "0.1.4",
-        showBanner: unityShowBanner,
-      };
-
-      // By default Unity keeps WebGL canvas render target size matched with
-      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
-      // Set this to false if you want to decouple this synchronization from
-      // happening inside the engine, and you would instead like to size up
-      // the canvas DOM size and WebGL render target sizes yourself.
-      // config.matchWebGLToCanvasSize = false;
-
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        // Mobile device style: fill the whole browser client area with the game canvas:
-        var meta = document.createElement('meta');
-        meta.name = 'viewport';
-        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-        document.getElementsByTagName('head')[0].appendChild(meta);
-      }
-
-      loadingBar.style.display = "block";
-
-      var script = document.createElement("script");
-      script.src = loaderUrl;
-      script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-          progressBarFull.style.width = 100 * progress + "%";
-        }).then((unityInstance) => {
-          loadingBar.style.display = "none";
-        }).catch((message) => {
-          alert(message);
-        });
-      };
-      document.body.appendChild(script);
-    </script>
-  </body>
 </html>

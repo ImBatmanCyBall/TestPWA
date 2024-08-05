@@ -1,0 +1,468 @@
+:root {
+
+    /* Primary Color (Base: Lavender for Light Theme) */
+    --site-primary-darkest: #2469d0;
+    /* A deep, rich lavender tone */
+    --site-primary-darker: #335991;
+    /* A darker shade of lavender */
+    --site-primary: #314D78;
+    /* The base lavender */
+    --site-primary-light: #7290bd;
+    /* A lighter shade for subtle highlights */
+    --site-primary-lighter: #a4c2f0;
+    /* The lightest shade for backgrounds */
+
+    /* Secondary Color (Base: Light Grey) */
+    --site-secondary-darkest: #646464;
+    /* A darker, more saturated grey */
+    --site-secondary-darker: #808080;
+    /* Medium-dark shade of grey */
+    --site-secondary: #A0A0A0;
+    /* The base grey */
+    --site-secondary-light: #C0C0C0;
+    /* A lighter, serene grey */
+    --site-secondary-lighter: #E0E0E0;
+    /* The lightest shade, almost white */
+    /* Neutral Colors for Backgrounds and Text */
+    --site-neutral-darkest: #1E1E1E;
+    /* Darkest gray - for text */
+    --site-neutral-darker: #8D99AE;
+    /* Dark gray - for less emphasized text */
+    --site-neutral: #F7F7F9;
+    /* Medium gray */
+    --site-neutral-light: #b3b3b3;
+    /* Light gray - for borders or lines */
+    --site-neutral-lighter: #d9d9d9;
+    /* Lighter gray - for backgrounds */
+
+    /* Accent Colors */
+    --site-accent1: #006699;
+    /* A cool blue accent */
+    --site-accent2: #cc3333;
+    /* A vibrant red accent */
+    --site-accent3: #f2f2f2;
+    /* A very light gray, for backgrounds or cards */
+
+    /* Utility Colors */
+    --site-white: var(--site-neutral);
+    /* Pure white for backgrounds or elements */
+    --site-black: #000000;
+    /* Pure black for text or contrasts */
+
+    /* Secondary Colors Adjustments */
+    --secondary-color: var(--site-secondary);
+    /* Green */
+    --secondary-color-light: var(--site-secondary-light);
+    /* Lighter green */
+    --secondary-color-lightest: var(--site-secondary-lighter);
+    /* Lightest green */
+
+    --site-cta: var(--site-secondary);
+    /* Call-to-action color*/
+    --site-cta-text: var(--site-primary-darkest);
+    --site-cta-alt-text: var(--site-primary-light);
+
+    /* Neutral Colors - Aligned with New Palette */
+    --neutral-darkest: var(--site-neutral-darkest);
+    /* Darkest gray */
+    --neutral-darker: var(--site-neutral-darker);
+    /* Dark gray */
+    --neutral-dark: var(--site-neutral);
+    /* Medium gray */
+    --neutral: var(--site-neutral-light);
+    /* Light gray */
+    --neutral-light: var(--site-neutral-lighter);
+    /* Lighter gray */
+    --neutral-lighter: #e6e6e6;
+    /* Even lighter gray */
+    --neutral-lightest: #f2f2f2;
+    /* Near white gray */
+
+    /* Background Colors - Utilizing Neutrals */
+    --background-primary: var(--neutral-darkest);
+    /* Darkest gray for primary background */
+    --background-secondary: var(--neutral-darker);
+    /* Dark gray for secondary background */
+    --background-tertiary: var(--site-primary-light);
+    /* Medium gray for tertiary background */
+
+    /* Shadow Color */
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    /* Shadow with slight transparency */
+    /* transparent black */
+
+    --bs-font-sans-serif: system-ui,
+        -apple-system,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        "Noto Sans",
+        "Liberation Sans",
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji";
+
+    --bs-font-monospace: SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        "Liberation Mono",
+        "Courier New",
+        monospace;
+
+    --site-white-darkest: #4c4c4c;
+    --site-white-darker: #e4e0e0;
+    --site-white-dark: #e5e5e5;
+    --site-white: #fff;
+    --site-white-light: #efefef;
+    --site-white-lighter: #fff;
+    --site-white-lightest: #fff;
+    --site-dark-darkest: #3c3c42;
+    --site-dark-darker: #272D31;
+    --site-dark-dark: #1f1f1f;
+    --site-dark: #2F2F2F;
+    --site-dark-light: #a29c9c;
+    --site-dark-lighter: #dedede;
+    --site-dark-lightest: #dfdfdf;
+    --site-blue: #0086DC;
+    --site-darkest-blue: #021354;
+    --site-dark-blue: #031768;
+    --site-pastel-blue: #33FFFF;
+    --site-teal: #0F4C4C;
+    --site-purple: #B05ADB;
+    --site-red: #dc0002;
+    --site-dark-gray: #b3b6cb;
+    --site-gray-dark: #666;
+    --site-gray-light: #999;
+    --site-gray: #f6f6f6;
+    --site-alert: #FFE6E5;
+    --site-warning: #FFF3E5;
+    --site-warning-text: #FC921C;
+    --site-green: #49cd8d;
+    --site-green-rgb: 12, 212, 85;
+    --site-yellow: rgb(218, 221, 48);
+    --site-orange: rgb(247, 138, 14);
+    --site-orange-light: #FFA60D;
+    --site-brown: #794129;
+    --pale-blue: #DAEAF8;
+    --primaryColor: #0086dc;
+    --secondaryColor: #FF8319;
+    --successColor: #0cd455;
+    --dangerColor: #e30000;
+    --infoColor: #2460E8;
+
+    --pale-blue-gradient: linear-gradient(90deg, rgba(218, 234, 248, 1) 0%, rgba(248, 252, 255, 1) 20%, rgba(255, 255, 255, 0) 100%);
+
+    --base-font-size: 16px;
+
+    --display-large: calc(var(--base-font-size) * 3.5625);
+    --display-medium: calc(var(--base-font-size) * 2.8125);
+    --display-small: calc(var(--base-font-size) * 2.25);
+
+    --headline-large: calc(var(--base-font-size) * 2);
+    --headline-medium: calc(var(--base-font-size) * 1.75);
+    --headline-small: calc(var(--base-font-size) * 1.5);
+
+    --title-large: calc(var(--base-font-size) * 1.375);
+    --title-medium: calc(var(--base-font-size) * 1);
+    --title-small: calc(var(--base-font-size) * 0.875);
+
+    --label-large: calc(var(--base-font-size) * 0.875);
+    --label-medium: calc(var(--base-font-size) * 0.75);
+    --label-small: calc(var(--base-font-size) * 0.6875);
+
+    --body-large: calc(var(--base-font-size) * 1);
+    --body-medium: calc(var(--base-font-size) * 0.875);
+    --body-small: calc(var(--base-font-size) * 0.75);
+
+    --common-margin: 16px;
+    --font-small: 14px;
+    --font-extra-small: 10px;
+    --font-size-16: 16px;
+    --font-size-18: 18px;
+    --font-size-20: 20px;
+    --font-size-22: 22px;
+    --font-size-32: 32px;
+    --font-size-xl: 48px;
+    --radius-16: 16px;
+    --radius-8: 8px;
+    --radius-4: 4px;
+    --radius-circle: 50%;
+    --input-height: 50px;
+    --header-height: 54px;
+    --radio-list-height: 60px;
+    --sidebar-width: 280px;
+    --sidebar-profile-height: 64px;
+    --sidebar-expanded-width: 264px;
+    --sidebar-menu-item-height: 60px;
+    --main-body-padding: 24px;
+
+    /* --main-body-padding: 12px; */
+    --mobile-header-height: 54px;
+    --onboarding-header-height: 180px;
+
+    --site-gutter-x: 1.5rem;
+    --site-gutter-y: 0;
+
+    --appbar-height: 72px;
+    --mobile-header-height: 54px;
+    --btn-cta-height: 48px;
+
+    --nav-expanded-width: 240px;
+    --nav-expanded-width-neg: -180px;
+    --nav-collapsed-width: 60px;
+
+    --content-body-max-width: 1200px;
+
+    /* Light Theme (default) */
+    --text-color: var(--site-secondary-lighter);
+    --text-color-secondary: var(--site-secondary-lightest);
+    --text-primary: var(--site-primary);
+    /* Dark for readability */
+    --bkg-color: var(--site-neutral);
+    /* Light background */
+    --bkg-color2: var(--site-white);
+
+    --bkg-color3: var(--neutral-light);
+
+    --bkg-primary-lighter: var(--site-primary-lighter);
+
+    /* Alternate light background */
+    --bkg-color-rgb: 239, 239, 239;
+
+    /* Secondary text color */
+    --bkg-color-secondary: var(--neutral-light);
+    /* Secondary background color */
+    --bkg-color-light: var(--neutral-lightest);
+    /* Lightest background */
+    --border-color: var(--site-primary);
+    /* Primary color for borders */
+    --text-inverse: var(--neutral-darkest);
+    /* Inverse text color */
+    --bkg-color-inverse: var(--site-primary-light);
+    /* Inverse background color */
+    --bkg-color-inverse-rgb: 17, 17, 17;
+    /* RGB format for inverse background */
+    --container-border-color: var(--neutral-dark);
+    /* Border color for containers */
+
+    --bkg-opacity: 0.5;
+    --bkg-wizard-opacity: 0.1;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: var(--site-primary);
+    color: var(--text-color);
+}
+
+canvas {
+    display: block;
+}
+
+body {
+    margin: 0;
+}
+
+#unity-container {
+    width: 100%;
+    height: 100%;
+}
+
+#unity-canvas {
+    width: 100%;
+    height: 100%;
+
+}
+
+#loading-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#unity-loading-bar {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#unity-logo {
+    text-align: center;
+}
+
+#unity-logo img {
+    max-width: 80%;
+}
+
+#unity-progress-bar-empty {
+    width: 80%;
+    height: 24px;
+    margin: 10px 20px 20px 10px;
+    text-align: left;
+    border: 1px solid var(--neutral);
+    padding: 2px;
+}
+
+#unity-progress-bar-full {
+    width: 0%;
+    height: 100%;
+    background: var(--neutral);
+}
+
+.light #unity-progress-bar-empty {
+    border-color: var(--site-neutral-darkest);
+}
+
+.light #unity-progress-bar-full {
+    background: var(--site-neutral-darkest);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.spinner,
+.spinner:after {
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+}
+
+.spinner {
+    margin: 10px;
+    font-size: 10px;
+    position: relative;
+    text-indent: -9999em;
+    border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+    border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+    border-left: 1.1em solid var(--neutral);
+    transform: translateZ(0);
+    animation: spinner-spin 1.1s infinite linear;
+}
+
+@keyframes spinner-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.install-prompt {
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.install-prompt.visible {
+    display: flex;
+}
+
+.install-content {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 300px;
+    margin: auto;
+}
+
+.install-content h1 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.install-content p {
+    font-size: 16px;
+}
+
+.install-content ol {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.install-content .icon-share::before {
+    content: '🔗';
+    margin-right: 5px;
+}
+
+.install-instructions,
+.beforeinstallprompt-instructions {
+    display: none;
+}
+
+.install-instructions.visible,
+.beforeinstallprompt-instructions.visible {
+    display: block;
+}
+
+.install-image{
+    display:none;
+    margin: 12px 6px;
+}
+
+.install-image.visible{
+    display: block;
+}
+
+.btn-retry,
+.btn-install {
+    background-color:var(--site-neutral);
+    color: var(--site-primary-darkest);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px auto;
+    display: none;
+}
+
+.btn-retry:hover,
+.btn-install:hover {
+    color: var(--site-neutral); 
+    background-color: var(--site-primary-light);
+}
+
+.btn-install.visible{
+    display: block;
+}
+
+.required-notice{
+    width: auto;
+    margin: 12px auto;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
