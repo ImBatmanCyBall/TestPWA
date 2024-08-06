@@ -335,23 +335,18 @@
 
             try {
 
-                // const module = await import('js/libs/thirdweb-unity-bridge.js');
+                try {
 
-                // const unityInstance = await createUnityInstance(canvas, config, (progress) => {
-                //     spinner.style.display = "none";
-                //     progressBarEmpty.style.display = "";
-                //     progressBarFull.style.width = `${100 * progress}%`;
-                // });
+                    const unityInstance = await createUnityInstance(canvas, config, (progress) => {
+                        progressBarFull.style.width = 100 * progress + "%";
+                    });
 
-                // loadingCover.style.display = "none";
-
-                createUnityInstance(canvas, config, (progress) => {
-                    progressBarFull.style.width = 100 * progress + "%";
-                }).then((unityInstance) => {
                     loadingBar.style.display = "none";
-                }).catch((message) => {
-                    alert(message);
-                });
+                    document.getElementById('loading-cover').style.display = 'none';
+
+                } catch (error) {
+                    alert(error.message);
+                }
 
             } catch (error) {
                 //alert(error.message);
