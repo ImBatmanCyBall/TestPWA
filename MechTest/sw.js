@@ -1,3 +1,4 @@
+
 importScripts("js/libs/localforage.min.js");
 
 const currentVersion = "1.0.0.2";

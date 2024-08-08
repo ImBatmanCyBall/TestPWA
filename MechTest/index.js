@@ -7,6 +7,7 @@
         bodyParser = require('body-parser'),
         errorHandler = require('./routes/error'),
         expressStaticGzip = require('express-static-gzip'),
+        fs = require('fs'),
         path = require('path');
 
     function setCacheControl(res, path, stat) {
@@ -73,7 +74,7 @@
     }));
 
     // Watch for file changes
-    const watcher = chokidar.watch(path.join(__dirname, 'public'), {
+    const watcher = chokidar.watch(__dirname, {
         ignored: /(^|[\/\\])\../, // ignore dotfiles
         persistent: true
     });
