@@ -1,15 +1,17 @@
 
 importScripts("js/libs/localforage.min.js");
 
-const currentVersion = "1.0.0.2";
+const currentVersion = "1.0.0.3";
 const preCache = "PRECACHE-" + currentVersion;
 const manifestUrl = 'cache-manifest.json';
 
 self.addEventListener("install", (event) => {
+
     console.log("Installing the service worker!");
     self.skipWaiting();
-    // Uncomment the following line if you want to cache assets during installation
-    // event.waitUntil(updateCacheFromManifest());
+
+    event.waitUntil(updateCacheFromManifest());
+
 });
 
 self.addEventListener("activate", (event) => {
@@ -37,32 +39,49 @@ async function updateCacheFromManifest() {
             console.log("New version found. Updating cache...");
             await updateCacheFiles(manifest.files);
         }
+
     } catch (err) {
         console.error('Error fetching manifest:', err);
     }
 }
 
+
 async function updateCacheFiles(files) {
+
     const cache = await caches.open(preCache);
 
     for (const file of files) {
-        const response = await cache.match(file.path);
-        const lastModifiedHeader = response ? response.headers.get('last-modified') : null;
 
-        const roundedOriginalDate = Math.floor(new Date(lastModifiedHeader).getTime() / 1000) * 1000;
+        const response = await fetch(file.path, { method: 'HEAD' });
+        const lastModifiedHeader = response.headers.get('Last-Modified');
+        const cachedResponse = await cache.match(file.path);
+        const roundedOriginalDate = cachedResponse ? Math.floor(new Date(cachedResponse.headers.get('last-modified')).getTime() / 1000) * 1000 : 0;
         const roundedManifestDate = Math.floor(new Date(file.lastModified).getTime() / 1000) * 1000;
+        const roundedNewDate = Math.floor(new Date(lastModifiedHeader).getTime() / 1000) * 1000;
 
-        const shouldUpdate = roundedOriginalDate < roundedManifestDate;
+        const shouldUpdate = roundedOriginalDate < roundedNewDate || roundedManifestDate < roundedNewDate;
 
-        if (response) {
-            console.log(`Found in cache: ${file.path} - ${lastModifiedHeader}`);
+        if (cachedResponse) {
+            console.log(`Found in cache: ${file.path} - ${cachedResponse.headers.get('last-modified')}`);
         }
 
         if (shouldUpdate) {
             console.log('Updating cache:', file.path);
             await cache.add(file.path);
+            notifyClientsOfUpdate();
         }
+
     }
+
+}
+
+// Notify clients (UI) of a new update
+function notifyClientsOfUpdate() {
+    self.clients.matchAll({ type: 'window' }).then(clients => {
+        clients.forEach(client => {
+            client.postMessage({ action: 'updateAvailable' });
+        });
+    });
 }
 
 async function clearOldCaches() {

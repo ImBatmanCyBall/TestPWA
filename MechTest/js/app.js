@@ -211,31 +211,51 @@
 
     function handleServiceWorkerMessage(event) {
         try {
-            const message = JSON.parse(event.data);
-            const isRefresh = message.type === 'refresh';
-            const isAsset = message.url.includes('asset');
-            const lastETag = localStorage.currentETag;
-            const isNew = lastETag !== message.eTag;
+            // Parse the incoming message from the service worker
+            const message = event.data;  // Assuming the message is already a JavaScript object, not JSON string
 
-            if (isRefresh && isAsset && isNew) {
-                if (lastETag) {
-                    notice.hidden = false;
-                    localStorage.currentETag = message.eTag;
-                }
+            switch (message.action) {
+                case 'updateAvailable':
+                    // Handle the update notification
+                    handleUpdateAvailable(message);
+                    break;
 
-                switch (message.type) {
-                    case 'offline':
-                        updateOnlineStatus({ onLine: false });
-                        break;
-                    case 'online':
-                        updateOnlineStatus({ onLine: true });
-                        break;
-                    default:
-                        break;
-                }
+                case 'offline':
+                    // Handle offline status
+                    updateOnlineStatus({ onLine: false });
+                    break;
+
+                case 'online':
+                    // Handle online status
+                    updateOnlineStatus({ onLine: true });
+                    break;
+
+                default:
+                    console.warn('Unhandled message action from service worker:', message.action);
+                    break;
             }
         } catch (error) {
-            console.error('Error parsing message from service worker', event, error);
+            console.error('Error handling message from service worker', event, error);
+        }
+    }
+
+    function handleUpdateAvailable(message) {
+        // Notify the user that an update is available
+        const userConfirmed = confirm('A new version of the game is available. Do you want to reload the page to update?');
+
+        if (userConfirmed) {
+            // Reload the page to get the new version
+            window.location.reload();
+        }
+    }
+
+    function updateOnlineStatus({ onLine }) {
+        if (onLine) {
+            console.log('The application is online.');
+            // You could update the UI to reflect online status if needed
+        } else {
+            console.log('The application is offline.');
+            // You could update the UI to reflect offline status if needed
         }
     }
 
