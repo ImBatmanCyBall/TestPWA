@@ -1,29 +1,169 @@
 {
-    "version": 1,
-    "files": [
-        {
-            "path": "/",
-            "lastModified": 1703278632246
-        },
-        {
-            "path": "/css/style.css",
-            "lastModified": 1703278632246
-        },
-        {
-            "path": "/js/libs/localforage.min.js",
-            "lastModified": 1703278632246
-        },
-        {
-            "path": "/js/libs/push-manager.js",
-            "lastModified": 1703278632246
-        },
-        {
-            "path": "/js/libs/addtohomescreen.js",
-            "lastModified": 1703278632246
-        },
-        {
-            "path": "/js/app.js",
-            "lastModified": 1703278632246
-        }
-    ]
+  "version": 1723125217858,
+  "files": [
+    {
+      "path": "/favicon.png",
+      "lastModified": 1723113850492
+    },
+    {
+      "path": "/index.js",
+      "lastModified": 1723123700786
+    },
+    {
+      "path": "/",
+      "lastModified": 1723122521685
+    },
+    {
+      "path": "/sw.js",
+      "lastModified": 1723113929252
+    },
+    {
+      "path": "/Build/MechTest.framework.js",
+      "lastModified": 1722963042891
+    },
+    {
+      "path": "/Build/MechTest.loader.js",
+      "lastModified": 1721337551009
+    },
+    {
+      "path": "/Build/MechTest.wasm",
+      "lastModified": 1723113825594
+    },
+    {
+      "path": "/Build/XEX Machanics Build.framework.js",
+      "lastModified": 1721337551634
+    },
+    {
+      "path": "/Build/XEX Machanics Build.loader.js",
+      "lastModified": 1721337551635
+    },
+    {
+      "path": "/Build/XEX Machanics Build.wasm",
+      "lastModified": 1721337551914
+    },
+    {
+      "path": "/css/fullscreen-button.png",
+      "lastModified": 1723113850481
+    },
+    {
+      "path": "/css/style.css",
+      "lastModified": 1723113850487
+    },
+    {
+      "path": "/js/app.js",
+      "lastModified": 1723113850599
+    },
+    {
+      "path": "/img/android-chome-install-app.jpg",
+      "lastModified": 1723113850500
+    },
+    {
+      "path": "/img/android-chrome-install-a2hs.jpg",
+      "lastModified": 1723113850506
+    },
+    {
+      "path": "/img/android-chrome-install-prompt.jpg",
+      "lastModified": 1723113850511
+    },
+    {
+      "path": "/img/android-chrome-install.png",
+      "lastModified": 1723113850523
+    },
+    {
+      "path": "/img/beforeinstall-app-prompt-edge.png",
+      "lastModified": 1723113850528
+    },
+    {
+      "path": "/img/install-pwa-chrome-menu.png",
+      "lastModified": 1723113850534
+    },
+    {
+      "path": "/img/install-pwa-chrome.png",
+      "lastModified": 1723113850540
+    },
+    {
+      "path": "/img/android-chrome-install.jpg",
+      "lastModified": 1723113850518
+    },
+    {
+      "path": "/img/install-pwa-edge.png",
+      "lastModified": 1723113850552
+    },
+    {
+      "path": "/img/install-pwa-edge-menu.png",
+      "lastModified": 1723113850546
+    },
+    {
+      "path": "/img/iphone-share-add-to-home-screen-confirm.jpg",
+      "lastModified": 1723113850558
+    },
+    {
+      "path": "/img/ipad-share.png",
+      "lastModified": 1723113850557
+    },
+    {
+      "path": "/img/iphone-share-add-to-home-screen.jpg",
+      "lastModified": 1723113850567
+    },
+    {
+      "path": "/img/iphone-share-add-to-home-screen.png",
+      "lastModified": 1723113850574
+    },
+    {
+      "path": "/TemplateData/progress-bar-empty-light.png",
+      "lastModified": 1721337552196
+    },
+    {
+      "path": "/TemplateData/progress-bar-full-dark.png",
+      "lastModified": 1721337552233
+    },
+    {
+      "path": "/TemplateData/progress-bar-empty-dark.png",
+      "lastModified": 1721337552196
+    },
+    {
+      "path": "/TemplateData/progress-bar-full-light.png",
+      "lastModified": 1721337552234
+    },
+    {
+      "path": "/TemplateData/style.css",
+      "lastModified": 1721751920563
+    },
+    {
+      "path": "/TemplateData/unity-logo-light.png",
+      "lastModified": 1721337552237
+    },
+    {
+      "path": "/TemplateData/unity-logo-dark.png",
+      "lastModified": 1721337552235
+    },
+    {
+      "path": "/js/libs/addtohomescreen.js",
+      "lastModified": 1723113850606
+    },
+    {
+      "path": "/js/libs/addtohomescreen.min.js",
+      "lastModified": 1723113850613
+    },
+    {
+      "path": "/js/libs/localforage.min.js",
+      "lastModified": 1723113850620
+    },
+    {
+      "path": "/js/libs/thirdweb-unity-bridge.js",
+      "lastModified": 1723113850694
+    },
+    {
+      "path": "/js/libs/push-manager.js",
+      "lastModified": 1723113850628
+    },
+    {
+      "path": "/TemplateData/icons/unity-logo-dark.png",
+      "lastModified": 1721337552123
+    },
+    {
+      "path": "/TemplateData/icons/unity-logo-light.png",
+      "lastModified": 1721337552161
+    }
+  ]
 }

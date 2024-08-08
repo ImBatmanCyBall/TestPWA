@@ -1,6 +1,6 @@
 importScripts("js/libs/localforage.min.js");
 
-const currentVersion = "1.00";
+const currentVersion = "1.0.0.2";
 const preCache = "PRECACHE-" + currentVersion;
 const manifestUrl = 'cache-manifest.json';
 

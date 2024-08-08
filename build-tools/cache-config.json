@@ -1,0 +1,34 @@
+{
+    "rootDir": "../MechTest",
+    "excludePaths": [
+        "/logs",
+        "/meta",
+        "/routes",
+        "/lib",
+        "/node_modules",
+        "cache-manifest.json"
+    ],
+    "excludeExtensions": [
+        ".tmp",
+        ".log",
+        ".bak",
+        ".md",
+        "package.json",
+        "package-lock.json"
+    ],
+    "includeExtensions": [
+        ".html",
+        ".css",
+        ".js",
+        ".png",
+        ".jpg",
+        ".jpeg",
+        ".webp",
+        ".svg",
+        ".gif",
+        ".woff",
+        ".woff2",
+        ".ttf",
+        ".wasm"
+    ]
+}
