@@ -281,6 +281,7 @@ body {
 #unity-container {
     width: 100%;
     height: 100%;
+    display: none;
 }
 
 #unity-canvas {
@@ -428,18 +429,18 @@ body {
     display: block;
 }
 
-.install-image{
-    display:none;
+.install-image {
+    display: none;
     margin: 12px 6px;
 }
 
-.install-image.visible{
+.install-image.visible {
     display: block;
 }
 
 .btn-retry,
 .btn-install {
-    background-color:var(--site-neutral);
+    background-color: var(--site-neutral);
     color: var(--site-primary-darkest);
     border: none;
     padding: 10px 20px;
@@ -452,17 +453,18 @@ body {
 
 .btn-retry:hover,
 .btn-install:hover {
-    color: var(--site-neutral); 
+    color: var(--site-neutral);
     background-color: var(--site-primary-light);
 }
 
-.btn-install.visible{
+.btn-install.visible {
     display: block;
 }
 
-.required-notice{
+.required-notice {
     width: auto;
     margin: 12px auto;
     font-size: 1.5rem;
     font-weight: bold;
 }
+

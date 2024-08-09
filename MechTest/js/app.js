@@ -22,7 +22,8 @@
                         console.log('User accepted the A2HS prompt');
                         session.added = true;
                         updateSession();
-                        loadApplicationAssets();
+                       // loadApplicationAssets();
+                       loadHomePage();
                     } else {
                         console.log('User dismissed the A2HS prompt');
                         showRetryPrompt();
@@ -84,7 +85,8 @@
 
                         //alert("onCanIonInstallednstall");
 
-                        loadApplicationAssets();
+                        //loadApplicationAssets();
+                        loadHomePage();
 
                     },
                     onBeforeInstallPrompt: function (platform) {
@@ -374,6 +376,14 @@
         };
 
         document.body.appendChild(script);
+
+    }
+
+    function loadHomePage() {
+
+        document.getElementById('installPrompt').style.display = 'none';
+        document.getElementById('loading-cover').style.display = 'none';
+        document.querySelector('.xex-background').style.display = 'block';
 
     }
 

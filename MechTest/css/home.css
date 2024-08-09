@@ -1,0 +1,86 @@
+/* Container for the background image */
+.xex-background {
+    position: relative;
+    overflow: hidden;
+    display: none;
+}
+
+/* Container that holds the panels */
+.xex-container {
+    display: flex;
+    width: 500dvw;
+    height: 100dvh;
+    transform: translateX(0%);
+    /* 5 times the viewport width */
+    transition: transform 0.5s ease-out;
+    /* Smooth scrolling effect */
+    position: relative;
+}
+
+/* Each panel takes up 100% of the viewport width */
+.xex-panel {
+    width: 100dvw;
+    height: 100dvh;
+    /* Full height of the viewport */
+    flex-shrink: 0;
+}
+
+/* Background effect for parallax */
+.xex-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(/img/xex-background-64x29.jpg);
+    background-size: 500% 100%;
+    /* Spread the background image across 5 panels */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Keeps the background fixed during scroll */
+    z-index: -1;
+    /* Ensure it stays behind the content */
+}
+
+@media (min-width: 161px) {
+    .xex-container::before {
+        background-image: url(/img/xex-background-160x72.jpg);
+    }
+}
+
+@media (min-width: 321px) {
+    .xex-container::before {
+        background-image: url(/img/xex-background-320x143.jpg);
+    }
+}
+
+@media (min-width: 481px) {
+    .xex-container::before {
+        background-image: url(/img/xex-background-480x214.jpg);
+    }
+}
+
+@media (min-width: 641px) {
+    .xex-container::before {
+        background-image: url(/img/xex-background-640x285.jpg);
+    }
+}
+
+@media (min-width: 1024px) {
+    .xex-container::before {
+        background-image: url(/img/xex-background-1024x456.jpg);
+    }
+}
+
+@media (min-width: 1280px) {
+    .xex-container::before {
+        background-image: url(/img/xex-background-1280x569.jpg);
+    }
+}
+
+@media (min-width: 1920px) {
+    .xex-container::before {
+        background-image: url(/img/xex-background-1920x854.jpg);
+    }
+}
