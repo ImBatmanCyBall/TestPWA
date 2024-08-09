@@ -10,7 +10,7 @@
     display: flex;
     width: 500dvw;
     height: 100dvh;
-    transform: translateX(0%);
+    transform: translateX(-40%);
     /* 5 times the viewport width */
     transition: transform 0.5s ease-out;
     /* Smooth scrolling effect */

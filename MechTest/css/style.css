@@ -376,7 +376,7 @@ body {
 
 
 .install-prompt {
-    display: none;
+    display: block;
     position: fixed;
     flex-direction: column;
     top: 0;

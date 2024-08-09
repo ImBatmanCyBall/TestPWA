@@ -1,10 +1,17 @@
 (function (window) {
     "use strict";
 
-    let promptState = null;
+    let promptState = null,
+        gamePlay_template = null,
+        home_template = null,
+        pwa_template = null,
+        login_template = null,
+        app_container = document.querySelector('.app-container');
 
     async function initialize() {
         // Initialize other functionalities
+
+        await loadTemplates();
         bindEvents();
     }
 
@@ -22,8 +29,8 @@
                         console.log('User accepted the A2HS prompt');
                         session.added = true;
                         updateSession();
-                       // loadApplicationAssets();
-                       loadHomePage();
+                        // loadApplicationAssets();
+                        loadHomePage();
                     } else {
                         console.log('User dismissed the A2HS prompt');
                         showRetryPrompt();
@@ -131,9 +138,57 @@
             // Show custom installation instructions
             showInstallInstructions();
         } else {
-            // If not able to show install prompt, proceed to load application assets
-            loadApplicationAssets();
+
+            checkAuthentication();
+
         }
+    }
+
+    function checkAuthentication() {
+
+        //check if user is authenticated, localstorage.getItem("token") !== null
+
+        if (localStorage.getItem("token") !== null) {
+
+            //load the game
+            loadHomePage();
+
+        } else {
+
+            //load the login page
+            loadLogin();
+
+        }
+
+    }
+
+    function bindHomePageEvents() {
+
+        let mainAppBar = document.querySelector('.appbar-main');
+
+        mainAppBar.addEventListener('click', function (event) {
+
+            let target = event.target.closest('.btn-appbar');
+
+            if (target) {
+                let panelId = target.getAttribute('target-panelid');
+                let transformValue = target.getAttribute('transform');
+
+                if (panelId && transformValue !== null) {
+                    let panelContainer = document.querySelector('.xex-container');
+
+                    if (panelContainer) {
+                        // Update the transform value to scroll the desired panel into view
+                        panelContainer.style.transform = `translateX(${transformValue}%)`;
+
+                        // Optional: Add smooth scrolling behavior by modifying the transition (if needed)
+                        panelContainer.style.transition = 'transform 0.5s ease-out';
+                    }
+                }
+            }
+
+        });
+
     }
 
     // Service worker registration
@@ -281,8 +336,9 @@
 
     function showInstallInstructions() {
 
-        document.getElementById('loading-cover').style.display = 'none';
-        document.getElementById('installPrompt').classList.add('visible');
+        insertTemplate(pwa_template);
+
+        //document.getElementById('installPrompt').classList.add('visible');
 
         const instructions = document.querySelectorAll('.install-instructions');
         instructions.forEach(inst => inst.classList.remove('visible'));
@@ -320,10 +376,8 @@
 
     function loadApplicationAssets() {
 
-        //alert('loadApplicationAssets');
+        insertTemplate(gamePlay_template);
 
-        document.getElementById('installPrompt').style.display = 'none';
-      //  document.getElementById('loading-cover').style.display = 'none';
         document.getElementById('unity-container').style.display = 'block';
 
         loadGameAssets();
@@ -381,9 +435,49 @@
 
     function loadHomePage() {
 
-        document.getElementById('installPrompt').style.display = 'none';
-        document.getElementById('loading-cover').style.display = 'none';
+        insertTemplate(home_template);
+
+        bindHomePageEvents();
+
         document.querySelector('.xex-background').style.display = 'block';
+
+    }
+
+    function loadLogin() {
+
+        insertTemplate(login_template);
+
+        bindLoginEvents();
+
+    }
+
+    function bindLoginEvents() {
+
+    }
+
+    async function loadTemplate(url) {
+
+        let response = await fetch(url);
+
+        if (response.ok) {
+            return await response.text();
+
+        }
+
+    }
+
+    async function loadTemplates() {
+
+        gamePlay_template = await loadTemplate('src/templates/game-play.html');
+        home_template = await loadTemplate('src/templates/home-panels.html');
+        pwa_template = await loadTemplate('src/templates/pwa-install.html');
+        login_template = await loadTemplate('src/templates/login.html');
+
+    }
+
+    function insertTemplate(template) {
+
+        app_container.innerHTML = template;
 
     }
 

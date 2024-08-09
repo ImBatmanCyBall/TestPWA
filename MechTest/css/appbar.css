@@ -1,0 +1,104 @@
+/*  AppBar */
+.appbar {
+    border-top: solid 1px var(--site-dark-lightest);
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 72px;
+    overflow: hidden;
+    z-index: 999;
+    background-color: transparent;
+    /* Transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.btn-appbar {
+    flex: 1;
+    /* Make all buttons take equal space */
+    height: 100%;
+    background-color: transparent;
+    /* Transparent button background */
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--site-primary-darkest);
+    padding: 0;
+    position: relative;
+}
+
+.btn-appbar .appbar-icon {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    /* Space between icon and text */
+}
+
+.btn-appbar .appbar-btn-text {
+    font-size: 0.75em;
+    line-height: 1em;
+}
+
+.btn-appbar+.btn-appbar::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 60%;
+    width: 1px;
+    background-color: var(--site-primary-darkest);
+    /* Vertical line color */
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1;
+}
+
+.btn-appbar:focus,
+.btn-appbar:hover {
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    /* Slight background highlight on hover */
+}
+
+.appbar a.active,
+.appbar a:active,
+.btn-appbar:active {
+    color: var(--site-primary-darkest);
+    background-color: rgba(0, 0, 0, 0.1);
+    /* Active state background */
+}
+
+/* Fixes for other elements within the appbar */
+.appbar .fas,
+.appbar .far {
+    text-decoration: none;
+}
+
+.appbar-child-nav-left {
+    position: absolute;
+    left: 15px;
+}
+
+.appbar-child-nav-right {
+    position: absolute;
+    right: 15px;
+}
+
+[class*="appbar-child-nav-"] .fas,
+[class*="appbar-child-nav-"] .far {
+    text-align: center;
+    font-size: 1.25em;
+    color: var(--site-white-lightest);
+    line-height: 1.5em;
+    margin-top: 6px;
+}
