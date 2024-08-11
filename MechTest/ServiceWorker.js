@@ -1,4 +1,4 @@
-const cacheName = "XEX-XEX-Game-0.1.9.9";
+const cacheName = "XEX-XEX-Game-0.1.9.10";
 const contentToCache = [
     "Build/MechTest.loader.js",
     "Build/MechTest.framework.js",
