@@ -33,54 +33,25 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url(/img/xex-background-64x29.jpg);
-    background-size: 500% 100%;
+    background-image: url(/img/xex-background-1920x854.jpg);
+    background-size: cover;
     /* Spread the background image across 5 panels */
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-position: center center;
     /* Keeps the background fixed during scroll */
     z-index: -1;
     /* Ensure it stays behind the content */
 }
 
-@media (min-width: 161px) {
+
+@media (min-width: 384px) and (max-width: 512px) {
     .xex-container::before {
-        background-image: url(/img/xex-background-160x72.jpg);
+        background-image: url(/img/xex-background-2560x1138.jpg);
     }
 }
 
-@media (min-width: 321px) {
+@media (min-width: 512px) {
     .xex-container::before {
-        background-image: url(/img/xex-background-320x143.jpg);
-    }
-}
-
-@media (min-width: 481px) {
-    .xex-container::before {
-        background-image: url(/img/xex-background-480x214.jpg);
-    }
-}
-
-@media (min-width: 641px) {
-    .xex-container::before {
-        background-image: url(/img/xex-background-640x285.jpg);
-    }
-}
-
-@media (min-width: 1024px) {
-    .xex-container::before {
-        background-image: url(/img/xex-background-1024x456.jpg);
-    }
-}
-
-@media (min-width: 1280px) {
-    .xex-container::before {
-        background-image: url(/img/xex-background-1280x569.jpg);
-    }
-}
-
-@media (min-width: 1920px) {
-    .xex-container::before {
-        background-image: url(/img/xex-background-1920x854.jpg);
+        background-image: url(/img/xex-background-5120x2276.jpg);
     }
 }
