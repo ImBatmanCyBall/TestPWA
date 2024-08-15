@@ -222,7 +222,7 @@
     --text-color-secondary: var(--site-secondary-lightest);
     --text-primary: var(--site-primary);
     /* Dark for readability */
-    --bkg-color: var(--site-neutral);
+    --bkg-color: var(--site-neutral-darkest);
     /* Light background */
     --bkg-color2: var(--site-white);
 
@@ -266,7 +266,7 @@ html {
 html,
 body {
     height: 100%;
-    background-color: var(--site-primary);
+    background-color: var(--bkg-color);
     color: var(--text-color);
 }
 

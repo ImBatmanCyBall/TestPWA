@@ -1,25 +1,25 @@
 {
-  "version": 1723378588219,
+  "version": 1723462843782,
   "files": [
     {
       "path": "/favicon.png",
-      "lastModified": 1723378504991
-    },
-    {
-      "path": "/index.js",
-      "lastModified": 1723378505252
+      "lastModified": 1723462795738
     },
     {
       "path": "/",
-      "lastModified": 1723378505245
+      "lastModified": 1723462796205
+    },
+    {
+      "path": "/index.js",
+      "lastModified": 1723462796215
     },
     {
       "path": "/sw.js",
-      "lastModified": 1723378520630
+      "lastModified": 1723462815609
     },
     {
       "path": "/Build/MechTest.framework.js",
-      "lastModified": 1723378459738
+      "lastModified": 1723462741644
     },
     {
       "path": "/Build/MechTest.loader.js",
@@ -27,139 +27,147 @@
     },
     {
       "path": "/Build/MechTest.wasm",
-      "lastModified": 1723378460031
-    },
-    {
-      "path": "/Build/XEX Machanics Build.framework.js",
-      "lastModified": 1721337551634
+      "lastModified": 1723462741854
     },
     {
       "path": "/Build/XEX Machanics Build.loader.js",
-      "lastModified": 1721337551635
+      "lastModified": 1723462795100
+    },
+    {
+      "path": "/Build/XEX Machanics Build.framework.js",
+      "lastModified": 1723462795100
     },
     {
       "path": "/Build/XEX Machanics Build.wasm",
-      "lastModified": 1721337551914
-    },
-    {
-      "path": "/css/all.min.css",
-      "lastModified": 1723378504947
+      "lastModified": 1723462795323
     },
     {
       "path": "/css/all.css",
-      "lastModified": 1723378504936
+      "lastModified": 1723462795438
     },
     {
-      "path": "/css/style.css",
-      "lastModified": 1723378504977
-    },
-    {
-      "path": "/css/home.css",
-      "lastModified": 1723378504965
+      "path": "/css/all.min.css",
+      "lastModified": 1723462795528
     },
     {
       "path": "/css/appbar.css",
-      "lastModified": 1723378504956
+      "lastModified": 1723462795593
     },
     {
-      "path": "/img/android-chome-install-app.jpg",
-      "lastModified": 1723378505002
-    },
-    {
-      "path": "/img/android-chrome-install.jpg",
-      "lastModified": 1723378505036
-    },
-    {
-      "path": "/img/android-chrome-install.png",
-      "lastModified": 1723378505046
-    },
-    {
-      "path": "/img/beforeinstall-app-prompt-edge.png",
-      "lastModified": 1723378505058
-    },
-    {
-      "path": "/img/install-pwa-chrome-menu.png",
-      "lastModified": 1723378505071
+      "path": "/css/home.css",
+      "lastModified": 1723462795602
     },
     {
       "path": "/css/fullscreen-button.png",
-      "lastModified": 1723378504957
-    },
-    {
-      "path": "/img/install-pwa-chrome.png",
-      "lastModified": 1723378505083
+      "lastModified": 1723462795594
     },
     {
       "path": "/img/android-chrome-install-a2hs.jpg",
-      "lastModified": 1723378505016
-    },
-    {
-      "path": "/img/install-pwa-edge.png",
-      "lastModified": 1723378505102
-    },
-    {
-      "path": "/img/ipad-share.png",
-      "lastModified": 1723378505109
-    },
-    {
-      "path": "/img/install-pwa-edge-menu.png",
-      "lastModified": 1723378505093
+      "lastModified": 1723462795877
     },
     {
       "path": "/img/android-chrome-install-prompt.jpg",
-      "lastModified": 1723378505026
+      "lastModified": 1723462795917
     },
     {
-      "path": "/img/iphone-share-add-to-home-screen.jpg",
-      "lastModified": 1723378505118
+      "path": "/img/android-chrome-install.jpg",
+      "lastModified": 1723462795952
+    },
+    {
+      "path": "/css/style.css",
+      "lastModified": 1723462795666
+    },
+    {
+      "path": "/img/android-chrome-install.png",
+      "lastModified": 1723462795961
+    },
+    {
+      "path": "/img/beforeinstall-app-prompt-edge.png",
+      "lastModified": 1723462795969
+    },
+    {
+      "path": "/img/install-pwa-chrome.png",
+      "lastModified": 1723462795983
+    },
+    {
+      "path": "/img/install-pwa-edge-menu.png",
+      "lastModified": 1723462795989
+    },
+    {
+      "path": "/img/ipad-share.png",
+      "lastModified": 1723462796006
     },
     {
       "path": "/img/iphone-share-add-to-home-screen-confirm.jpg",
-      "lastModified": 1723378505110
+      "lastModified": 1723462796007
+    },
+    {
+      "path": "/img/android-chome-install-app.jpg",
+      "lastModified": 1723462795838
+    },
+    {
+      "path": "/img/iphone-share-add-to-home-screen.jpg",
+      "lastModified": 1723462796015
     },
     {
       "path": "/img/iphone-share-add-to-home-screen.png",
-      "lastModified": 1723378505127
+      "lastModified": 1723462796026
     },
     {
       "path": "/img/xex-background-1024x456.jpg",
-      "lastModified": 1723378505142
+      "lastModified": 1723462796043
     },
     {
-      "path": "/img/xex-background-1920x854.jpg",
-      "lastModified": 1723378505173
-    },
-    {
-      "path": "/img/xex-background-2560x1138.jpg",
-      "lastModified": 1723378505185
-    },
-    {
-      "path": "/img/xex-background-320x143.jpg",
-      "lastModified": 1723378505206
-    },
-    {
-      "path": "/img/xex-background-480x214.jpg",
-      "lastModified": 1723378505219
-    },
-    {
-      "path": "/img/xex-background-160x72.jpg",
-      "lastModified": 1723378505162
+      "path": "/img/xex-background-12040x5352.jpg",
+      "lastModified": 1723462796070
     },
     {
       "path": "/img/xex-background-1280x569.jpg",
-      "lastModified": 1723378505152
+      "lastModified": 1723462796082
     },
     {
-      "path": "/js/app.js",
-      "lastModified": 1723378505260
+      "path": "/img/install-pwa-edge.png",
+      "lastModified": 1723462795998
+    },
+    {
+      "path": "/img/xex-background-1920x854.jpg",
+      "lastModified": 1723462796106
+    },
+    {
+      "path": "/img/install-pwa-chrome-menu.png",
+      "lastModified": 1723462795976
+    },
+    {
+      "path": "/img/xex-background-2560x1138.jpg",
+      "lastModified": 1723462796121
+    },
+    {
+      "path": "/img/xex-background-320x143.jpg",
+      "lastModified": 1723462796145
     },
     {
       "path": "/img/xex-background-640x285.jpg",
-      "lastModified": 1723378505230
+      "lastModified": 1723462796186
+    },
+    {
+      "path": "/img/xex-background-5120x2276.jpg",
+      "lastModified": 1723462796175
+    },
+    {
+      "path": "/img/xex-background-480x214.jpg",
+      "lastModified": 1723462796158
     },
     {
       "path": "/img/xex-background-64x29.jpg",
-      "lastModified": 1723378505237
+      "lastModified": 1723462796194
+    },
+    {
+      "path": "/js/app.js",
+      "lastModified": 1723462796228
+    },
+    {
+      "path": "/img/xex-background-160x72.jpg",
+      "lastModified": 1723462796094
     },
     {
       "path": "/TemplateData/progress-bar-empty-dark.png",
@@ -178,124 +186,124 @@
       "lastModified": 1721337552234
     },
     {
+      "path": "/webfonts/fa-brands-400.svg",
+      "lastModified": 1723462815631
+    },
+    {
+      "path": "/webfonts/fa-brands-400.ttf",
+      "lastModified": 1723462815644
+    },
+    {
+      "path": "/webfonts/fa-brands-400.woff",
+      "lastModified": 1723462815656
+    },
+    {
+      "path": "/webfonts/fa-brands-400.woff2",
+      "lastModified": 1723462815666
+    },
+    {
+      "path": "/webfonts/fa-regular-400.svg",
+      "lastModified": 1723462815678
+    },
+    {
+      "path": "/webfonts/fa-regular-400.ttf",
+      "lastModified": 1723462815688
+    },
+    {
       "path": "/TemplateData/style.css",
       "lastModified": 1721751920563
     },
     {
-      "path": "/TemplateData/unity-logo-dark.png",
-      "lastModified": 1721337552235
+      "path": "/webfonts/fa-regular-400.woff",
+      "lastModified": 1723462815696
+    },
+    {
+      "path": "/webfonts/fa-regular-400.woff2",
+      "lastModified": 1723462815706
+    },
+    {
+      "path": "/webfonts/fa-solid-900.svg",
+      "lastModified": 1723462815728
+    },
+    {
+      "path": "/webfonts/fa-solid-900.ttf",
+      "lastModified": 1723462815744
+    },
+    {
+      "path": "/webfonts/fa-solid-900.woff",
+      "lastModified": 1723462815755
+    },
+    {
+      "path": "/webfonts/fa-solid-900.woff2",
+      "lastModified": 1723462815766
     },
     {
       "path": "/TemplateData/unity-logo-light.png",
       "lastModified": 1721337552237
     },
     {
-      "path": "/webfonts/fa-brands-400.svg",
-      "lastModified": 1723378520657
-    },
-    {
-      "path": "/webfonts/fa-brands-400.ttf",
-      "lastModified": 1723378520666
-    },
-    {
-      "path": "/webfonts/fa-brands-400.woff",
-      "lastModified": 1723378520674
-    },
-    {
-      "path": "/webfonts/fa-brands-400.woff2",
-      "lastModified": 1723378520683
-    },
-    {
-      "path": "/webfonts/fa-regular-400.svg",
-      "lastModified": 1723378520698
-    },
-    {
-      "path": "/webfonts/fa-regular-400.ttf",
-      "lastModified": 1723378520705
-    },
-    {
-      "path": "/webfonts/fa-regular-400.woff",
-      "lastModified": 1723378520713
-    },
-    {
-      "path": "/webfonts/fa-regular-400.woff2",
-      "lastModified": 1723378520719
-    },
-    {
-      "path": "/webfonts/fa-solid-900.svg",
-      "lastModified": 1723378520744
-    },
-    {
-      "path": "/webfonts/fa-solid-900.ttf",
-      "lastModified": 1723378520756
-    },
-    {
-      "path": "/webfonts/fa-solid-900.woff",
-      "lastModified": 1723378520766
-    },
-    {
-      "path": "/webfonts/fa-solid-900.woff2",
-      "lastModified": 1723378520773
-    },
-    {
       "path": "/webfonts/fa-v4compatibility.ttf",
-      "lastModified": 1723378520782
+      "lastModified": 1723462815773
     },
     {
       "path": "/webfonts/fa-v4compatibility.woff2",
-      "lastModified": 1723378520787
+      "lastModified": 1723462815779
     },
     {
       "path": "/webfonts/fontello.svg",
-      "lastModified": 1723378520806
+      "lastModified": 1723462815788
     },
     {
       "path": "/webfonts/fontello.ttf",
-      "lastModified": 1723378520815
-    },
-    {
-      "path": "/webfonts/fontello.woff",
-      "lastModified": 1723378520821
+      "lastModified": 1723462815798
     },
     {
       "path": "/webfonts/fontello.woff2",
-      "lastModified": 1723378520831
+      "lastModified": 1723462815819
     },
     {
-      "path": "/js/libs/addtohomescreen.min.js",
-      "lastModified": 1723378505277
+      "path": "/webfonts/fontello.woff",
+      "lastModified": 1723462815809
+    },
+    {
+      "path": "/TemplateData/unity-logo-dark.png",
+      "lastModified": 1721337552235
     },
     {
       "path": "/js/libs/addtohomescreen.js",
-      "lastModified": 1723378505269
+      "lastModified": 1723462796241
     },
     {
       "path": "/js/libs/localforage.min.js",
-      "lastModified": 1723378505282
-    },
-    {
-      "path": "/js/libs/thirdweb-unity-bridge.js",
-      "lastModified": 1723378505357
+      "lastModified": 1723462796262
     },
     {
       "path": "/js/libs/push-manager.js",
-      "lastModified": 1723378505287
+      "lastModified": 1723462796272
+    },
+    {
+      "path": "/js/libs/thirdweb-unity-bridge.js",
+      "lastModified": 1723462796342
+    },
+    {
+      "path": "/js/libs/addtohomescreen.min.js",
+      "lastModified": 1723462796253
     },
     {
       "path": "/src/templates/game-play.html",
-      "lastModified": 1723378520597
+      "lastModified": 1723462815605
     },
     {
       "path": "/src/templates/home-panels.html",
-      "lastModified": 1723378520603
+      "lastModified": 1723462815606
     },
     {
       "path": "/src/templates/login.html",
-      "lastModified": 1723378520612
+      "lastModified": 1723462815606
     },
     {
       "path": "/src/templates/pwa-install.html",
-      "lastModified": 1723378520620
+      "lastModified": 1723462815608
     },
     {
       "path": "/TemplateData/icons/unity-logo-light.png",
